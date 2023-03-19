@@ -35,6 +35,8 @@ func main() {
 		data["_obscure"] = "pass"
 		if overrides["type"] == "local" {
 			data["_root"] = "/data/webdav/" + auth_input.User
+		} else {
+			data["_root"] = ""
 		}
 		for k, v := range overrides {
 			data[k] = v
