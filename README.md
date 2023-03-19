@@ -39,9 +39,7 @@ version: '3'
 
 services:
   rclone:
-    image: rclone-webdav
-    build:
-      context: https://github.com/gera2ld/rclone-webdav.git#main
+    image: ghcr.io/gera2ld/rclone-webdav
     restart: unless-stopped
     volumes:
       - ./data/auth_data.json:/data/auth_data.json:ro
